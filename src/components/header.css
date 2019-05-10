@@ -1,0 +1,162 @@
+@import './colors.css';
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+*{
+    box-sizing: border-box;
+}
+
+.headerContainer{
+    background: var(--background-color);
+    max-width: 1000px;
+    padding: 0px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#labelNav {
+    font-size: 4em;
+    display: none;
+    color: #fff;
+}
+
+#labelNav img{
+    padding: 2%;
+}
+
+#toggleNav {
+    display: none;
+}
+
+.innerNav{
+    margin-top: 10px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    margin-left: 25%;
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+}
+
+.innerNav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: var(--font-color);
+    padding: 4%;
+}
+
+.border {
+    background: var(--font-color);
+    width: 150px;
+    height: 1.8em;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.border select {
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+.logging {
+    text-decoration: none;
+    color: var(--font-color);
+    display: flex;
+    flex-direction: row;
+}
+
+.logging:hover {
+    text-decoration: underline;
+}
+
+#form{
+    display:flex;
+    flex-direction:row;
+    border:1px solid grey;
+    padding:2px;
+    border-radius: 5px;
+}
+#form input{
+    flex-grow:2;
+    border:none;
+    vertical-align: middle;
+    color: var(--font-color);
+    background: var(--background-color);
+    color: var(--font-color);
+    font-weight: 400;
+}
+
+#form button{
+    border: none;
+    background: transparent;
+}
+
+.text{
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+input:focus,
+button:focus,
+select:focus,
+.border {
+    outline: 0;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .innerNav {
+        margin-left: 10%;
+    }
+    .innerNav div{
+        padding: 3% 0;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .headerContainer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .innerNav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    #labelNav {
+        display: block;
+        cursor: pointer;
+    }
+
+    .innerNav {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        display: none;
+    }
+
+    #toggleNav:checked + .innerNav {
+        display: flex;
+    }
+}
