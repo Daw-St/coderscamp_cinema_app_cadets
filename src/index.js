@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Slider from './components/slider/Slider';
+import Home from './containers/home'
 
-ReactDOM.render(<Slider />, document.querySelector('#root'))
+
+ReactDOM.render(<Home />, document.querySelector('#root'))
